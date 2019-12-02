@@ -46,6 +46,12 @@ demo1(){
    return 0
  }
 
+# ok 这是在本地的改变
+demo2(){
+  kaka
+  return 0
+}
+
 ###############################
 colorEcho(){
     COLOR=$1
