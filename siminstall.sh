@@ -39,8 +39,12 @@ GREEN="32m"    # Success message
 YELLOW="33m"   # Warning message
 BLUE="36m"     # Info message
 
+# 这是在云端的改变
 
-
+demo1(){
+   haha
+   return 0
+ }
 
 ###############################
 colorEcho(){
