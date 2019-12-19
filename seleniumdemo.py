@@ -37,18 +37,6 @@ for u in data1:
 print(len(data2))
 print(data2)
 
-import requests
-res = requests.get(url)
-from bs4 import BeautifulSoup
-res.encoding = 'utf-8'
-soup = BeautifulSoup(res.text)
-cont1 = soup.select('td[xpath="1"]')                        #  选择特定标签 td
-print("result length is",len(cont1))
-print(cont1)
-data1 = [n for n in range(0, len(cont1))]
-for i in range(len(cont1)):
-    data1[i] = cont1[i].text
-print(data1)
 
 
 driver.quit()
