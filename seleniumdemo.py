@@ -25,18 +25,13 @@ try:
 except NoSuchElementException:
     print('OMG2')
 
-#data1 = driver.find_elements_by_css_selector("#table_main" )   # 将css_selector定位到包含表格内容的较高级别，取出整个表作为列表的一个元素。
-data1 = driver.find_elements_by_tag_name("td" )  # tag tr 定位到表格某行，td定位到某行的某列，构成的列表有多个元素，甚至有表格外的内容。
+data1 = driver.find_elements_by_css_selector("#table_main" ) # 将css_selector定位到包含表格内容的较高级别，取出整个表作为列表的一个元素。
+# data1 = driver.find_elements_by_tag_name("td" )  # tag tr 定位到表格某行，td定位到某行的某列，构成的列表有多个元素，甚至有表格外的内容。
 print(len(data1))
 
-data2 = []     # data2去除了许多空元素，例如包含空格有510个元素，去除空格后剩余139个元素。运行时间长达20s。
-for u in data1:
-    if u.text != "":
-        data2.append(u.text) 
-
-print(len(data2))
-print(data2)
-
+data3 = data1[0].text.split()    # data1中一个元素包含了大字符串，用空格和\n分隔，用split方法分隔，产生所需的列表data3
+print(len(data3))
+print(data3)
 
 
 driver.quit()
